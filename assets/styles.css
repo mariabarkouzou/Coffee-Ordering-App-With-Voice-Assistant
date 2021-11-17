@@ -1,0 +1,183 @@
+h1 {
+	display: flex;
+	text-align: left;
+	font-size: 36px;
+	font-family: 'Dela Gothic One', Roboto, sans-serif;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 4px 8px 12px;
+}
+
+h2 {
+	font-size: 20px;
+	font-family: 'Dela Gothic One', Roboto, sans-serif;
+	padding: 0px 0px 0px 0px;
+	margin: 24px 4px 4px 16px;
+	color: #C29058;
+}
+
+h3 {
+	font-size: 16px;
+	font-family: 'Dela Gothic One', Roboto, sans-serif;
+	padding: 0px 4px 4px 22px;
+	margin: 0px 0px 0px 0px;
+}
+
+.item-title {
+	text-align: left;
+	font-size: 24px;
+	font-family: 'Inter', Roboto, sans-serif;
+	padding: 12px 0px 0px 0px;
+	color: #2D2215;
+}
+
+.container {
+	margin: 40px auto 200px auto;
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	margin: -20px auto -20px auto;
+	width: 1100px;
+}
+
+.coffee-deck,
+.desserts-deck {
+	display: flex;
+	justify-content: space-between;
+}
+
+.tile {
+	border-radius: 0px;
+	margin: 0px 20px 0px 0px;
+	padding: 16px 16px 20px 16px;
+	-webkit-transition: background-color 0.5s ease-out;
+	-moz-transition: background-color 0.5s ease-out;
+	-o-transition: background-color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
+}
+
+.tile:hover {
+	cursor: pointer;
+	background-color: rgb(237, 160, 2, .3);
+}
+
+.tile:active {
+	cursor: pointer;
+	background-color: rgb(237, 160, 2, .4);
+}
+
+.highlighted {
+	background-color: rgb(237, 160, 2, .5);
+}
+
+.forms {
+	font-family: 'Inter', Roboto, sans-serif;
+	background-color: rgb(237, 160, 2, .2);
+	padding: 80px 20px 20px 20px;
+	margin: 0px 0px 0px 0px;
+}
+
+.h2forms {
+	font-size: 20px;
+	font-family: 'Dela Gothic One', Roboto, sans-serif;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.h3forms {
+	font-size: 16px;
+	font-family: 'Dela Gothic One', Roboto, sans-serif;
+	padding: 10px 0px 16px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+hr {
+	display: block;
+	margin: 12px 0px 20px 0px;
+	border-width: 1px;
+	border-color: rgb(237, 160, 2, .4);
+}
+
+* {
+	outline-style: none;
+}
+
+.form-label {
+	font-size: 14px;
+	font-family: 'Inter', Roboto, sans-serif;
+	color: #2D2215;
+}
+
+.form-field {
+	margin-bottom: 20px;
+	margin-top: 8px;
+	text-align: left;
+	font-size: 14px;
+	font-family: 'Inter', Roboto, sans-serif;
+	color: #2D2215;
+	transition: .3s;
+}
+
+input[type=text] {
+	font-size: 14px;
+	padding: 8px;
+	border: 1px solid rgb(237, 160, 2, .1);
+	border-radius: 5px;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+input[type=text]:hover {
+	border: 1px solid rgb(237, 160, 2, .9);
+	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+input[type=text]:focus,
+input[type=text]:active {
+	border: 1px solid #ae8c65;
+	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+	font-size: 14px;
+	padding: 8px;
+	border: 1px solid rgb(237, 160, 2, .1);
+	border-radius: 5px;
+	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+textarea:hover {
+	border: 1px solid rgb(237, 160, 2, .9);
+	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+textarea:focus,
+textarea:active {
+	border: 1px solid #ae8c65;
+	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-btn {
+	/* remove default behavior */
+	appearance: none;
+	-webkit-appearance: none;
+	/* usual styles */
+	padding: 10px;
+	border: none;
+	text-align: center;
+	background-color: #795a39;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Inter', Roboto, sans-serif;
+	border-radius: 5px;
+	width: 100%;
+	-webkit-transition: background-color 0.5s ease-out;
+	-moz-transition: background-color 0.5s ease-out;
+	-o-transition: background-color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
+}
+
+.form-btn:hover {
+	cursor: pointer;
+	background-color: #543e26;
+}

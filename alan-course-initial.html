@@ -1,0 +1,122 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Coffee Ordering App With Voice Assistant"/>
+      <meta name="keywords" content="alan ai , voice assistant , javascript , coffee , dessert"/>
+      <link rel="stylesheet" href="assets/styles.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@300&display=swap" rel="stylesheet">
+      <link rel="icon" href="assets/logo.jpg" />
+      <title>Coffee Ordering App</title>
+   </head>
+   <body>
+  </div>
+  <div class="content">
+         <div class="container">
+            <div class="header">
+               <h1>
+                  <svg width="60" height="60" style="padding-right: 12px;"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <image href="assets/coffee.svg" height="60" width="60"/>
+                </svg>
+                Coffee Ordering App
+               </h1>
+            </div>
+            <h2>Coffee</h2>
+            <div class="coffee-deck">
+               <div class="tile" id="cappuccino" onclick="setCoffee('cappuccino')">
+                  <img src="assets/drinks-cappuccino.jpg" height="150px" />
+                  <div class="item-title">Cappuccino</div>
+               </div>
+               <div  class="tile" id="latte" onclick="setCoffee('latte')">
+                  <img src="assets/drinks-latte.jpg" height="150px"/>
+                  <div class="item-title">Latte</div>
+               </div>
+               <div class="tile" id="americano" onclick="setCoffee('americano')" >
+                  <img src="assets/drinks-americano.jpg" height="150px"/>
+                  <div class="item-title">Americano</div>
+               </div>
+            </div>
+            <h2>Desserts</h2>
+            <div class="desserts-deck">
+               <div  class="tile" id="cheesecake" onclick="setDessert('cheesecake')" >
+                  <img src="assets/dessert-cheesecake.jpg" height="150px" />
+                  <div class="item-title">Cheesecake</div>
+               </div>
+               <div  class="tile" id="brownie" onclick="setDessert('brownie')">
+                  <img src="assets/dessert-brownie.jpg" height="150px"/>
+                  <div class="item-title">Brownie</div>
+               </div>
+               <div class="tile" id="apple-pie" onclick="setDessert('apple pie')">
+                  <img src="assets/dessert-apple-pie.jpg" height="150px"/>
+                  <div class="item-title">Apple pie</div>
+               </div>
+            </div>
+         </div>
+         <div class="forms">
+            <div class="h2forms">Checkout</div>
+            <h3 class="h3forms">Your Order</h3>
+            <div id="order">
+               <div id="coffee" class="item-title"></div>
+               <div id="dessert" class="item-title"></div>
+            </div>
+            <hr>
+            <h3 class="h3forms">Your Info</h3>
+            <form action="/action_page.php" method="get" name="myForm">
+               <label for="name" class="form-label">Name</label>
+               <input type="text" id="name" name="name" class="form-field">
+               <label for="address" class="form-label">Address</label>
+               <input type="text" id="address" name="address" class="form-field">
+               <label for="comment" class="form-label">Comments</label>
+               <textarea id="comment" form="usrform" class="form-field"></textarea>
+               <input type="button" value="Purchase" class="form-btn">
+            </form>
+         </div>
+      </div>
+      <div class="alan-btn">
+        <script type="text/javascript"
+    src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+    <script>
+    var alanBtnInstance = alanBtn({
+      key: "e686a8efc42f14d31f82a5a1c77e8f952e956eca572e1d8b807a3e2338fdd0dc/stage",
+      onCommand: function (commandData) {
+        if (commandData.command === "go:back") {
+          //call client code that will react on the received command
+        }
+      },
+      rootEl: document.getElementById("alan-btn"),
+    });
+    </script>
+      <script>
+        let coffee = '';
+        let dessert = '';
+        
+        function setCoffee(coffee) {      
+          // Adding the order to the cart
+          document.getElementById("coffee").innerHTML = coffee.charAt(0).toUpperCase() + coffee.slice(1);
+          
+          // Highlighting tiles
+          let item = coffee.toLowerCase();
+          highlightProduct(item);
+        }         
+        
+        function setDessert(dessert) {    
+          // Adding the order to the cart
+          document.getElementById("dessert").innerHTML = dessert.charAt(0).toUpperCase() + dessert.slice(1);
+          
+          // Highlighting tiles
+          let item = dessert.replace(/\s+/g, '-').toLowerCase();
+          highlightProduct(item);
+        }
+        
+        function highlightProduct(item) {
+          const el = document.getElementById(item);
+          if (el) {
+            [...el.parentElement.children].forEach(sib => sib.classList.remove('highlighted'));
+            el.classList.add('highlighted');               
+          }
+        };
+        </script>
+   </body>
+</html>
