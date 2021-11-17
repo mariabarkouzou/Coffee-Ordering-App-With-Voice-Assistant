@@ -81,10 +81,19 @@
     var alanBtnInstance = alanBtn({
       key: "e686a8efc42f14d31f82a5a1c77e8f952e956eca572e1d8b807a3e2338fdd0dc/stage",
       onCommand: function (commandData) {
-        if (commandData.command === "go:back") {
-          //call client code that will react on the received command
-        }
-      },
+        if (commandData.command === "highlight") {
+          highlightProduct(commandData.item)
+        }else if(commandData.command === 'addCoffee'){
+          setCoffee(commandData.item)
+        }else if(commandData.command === 'addName'){
+         document.getElementById("name").value = commandData.name
+        }else if(commandData.command === 'addDessert'){
+          setDessert(commandData.item)
+        }else if(commandData.command === 'addAddress'){
+         document.getElementById("address").value = commandData.address
+      }else if(commandData.command === 'addComment'){
+         document.getElementById("comment").value = commandData.comment
+       }} ,
       rootEl: document.getElementById("alan-btn"),
     });
     </script>
